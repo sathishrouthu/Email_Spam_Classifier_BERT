@@ -1,0 +1,84 @@
+body{
+	padding: 5px;
+	margin: 10px;
+	background-color: #ffffff;
+	font-family: Albert Sans;
+}
+header{
+	margin: 0 auto;
+	background-color: #dab894;
+	height: 60px;
+	width: 90%;
+	text-align: center;
+	border-radius: 5px;
+	padding: 20px;
+}
+h1{
+	font-size: 40px;
+	margin: 2px;
+}
+section{
+	text-align: center;
+	width: 99%;
+	margin: 0 auto;
+}
+p.red{
+	padding: 5px;
+	margin: 10px;
+	height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: rgba(232, 35, 38, 0.3);
+	border-radius: 5px;
+}
+p.green{
+	padding: 5px;
+	margin: 10px;
+	height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: rgba(49, 232, 82, 0.3);
+	border-radius: 5px;
+}
+.left{
+	width: 45%;
+	padding: 2px;
+	display: inline-block;
+}
+.left img{
+	width: 100%;
+	height: 280px;
+	border-radius: 10px;
+}
+.right{
+	display: inline-block;
+	width: 45%;
+	padding: 2px;
+
+}
+.textbox{
+	margin: 5px auto;
+	height: 200px;
+	width: 90%;
+	padding: 10px;
+	margin: 0 auto;
+	display: block;
+	font-size: 20px;
+}
+label{
+	font-weight: bold;
+	font-size: 20px;
+}
+.button{
+	text-align: center;
+	height: 30px;
+	width: 150px;
+	margin: 15px auto;
+	font-size: 20px;
+	background-color: rgb(50, 168, 158);
+	border-radius: 6px;
+}
+.button:hover{
+	background-color: rgb(30, 123, 166);
+	cursor: pointer;
+}
