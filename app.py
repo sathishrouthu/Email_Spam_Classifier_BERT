@@ -15,7 +15,7 @@ def home():
 def detect():
 	if request.method == "POST":
 		input_text = request.form["input_text"]
-		wordvec = cv_transformer.transform([text])
+		wordvec = cv_transformer.transform([input_text])
 		p = nb_model.predict(wordvec)[0]
 		if(p==1):
 			msg = "The given mail text seems to be Spam Mail..!!"
