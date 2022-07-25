@@ -1,5 +1,7 @@
-from flask import *
+from flask import Flask,request, jsonify, render_template,redirect
 import pickle as pkl
+
+app = Flask(__name__)
 
 cv_transformer = pkl.load(open("models/cv_transformer.pkl","rb"))
 nb_model = pkl.load(open("models/nb_model.pkl","rb"))
@@ -7,8 +9,6 @@ nb_model = pkl.load(open("models/nb_model.pkl","rb"))
 def predict(text):
 	wordvec = cv_transformer.transform([text])
 	return nb_model.predict(wordvec)[0]
-
-app = Flask(__name__)
 
 @app.route('/')
 def home():
