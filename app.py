@@ -3,12 +3,9 @@ import pickle as pkl
 
 app = Flask(__name__)
 
-cv_transformer = pkl.load(open("models/cv_transformer.pkl","rb"))
-nb_model = pkl.load(open("models/nb_model.pkl","rb"))
+cv_transformer = pkl.load(open('models/cv_transformer.pkl','rb'))
+nb_model = pkl.load(open('models/nb_model.pkl','rb'))
 
-def predict(text):
-	wordvec = cv_transformer.transform([text])
-	return nb_model.predict(wordvec)[0]
 
 @app.route('/')
 def home():
@@ -18,7 +15,8 @@ def home():
 def detect():
 	if request.method == "POST":
 		input_text = request.form["input_text"]
-		p = predict(input_text)
+		wordvec = cv_transformer.transform([text])
+		p = nb_model.predict(wordvec)[0]
 		if(p==1):
 			msg = "The given mail text seems to be Spam Mail..!!"
 		else:
